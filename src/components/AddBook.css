@@ -1,34 +1,35 @@
 .add-book {
-    padding: 2rem 0;
-    border-top: 1px solid #e8e8e8;
+  padding: 2rem 0;
+  border-top: 1px solid #e8e8e8;
 }
 
 .add-book-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-input, select {
-    padding: 0.5rem 1rem;
-    border: 1px solid #ccc;
-    border-radius: 0.15rem;
-    margin-bottom: 1rem;
-    outline: none;
+input,
+select {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.15rem;
+  margin-bottom: 1rem;
+  outline: none;
 }
 
 /* input placeholder css */
 input::placeholder {
-    color: #ccc;
+  color: #ccc;
 }
 
 /* Desktop view */
 @media screen and (min-width: 768px) {
-    .add-book-content {
-        flex-direction: row;
-    }
+  .add-book-content {
+    flex-direction: row;
+  }
 
-    .title-inp {
-        width: 70%;
-    }
+  .title-inp {
+    width: 70%;
+  }
 }
