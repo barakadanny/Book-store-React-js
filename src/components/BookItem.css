@@ -1,0 +1,115 @@
+.book-item {
+  background-color: var(--white-color);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  border: 1px solid #e4dede;
+  padding: 1rem 1rem 1rem 1rem; /* top right bottom left */
+  transition: all 0.3s ease-in-out;
+}
+
+.book-item:hover {
+  border: 1px solid var(--dark-rgba-color);
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+}
+
+.left-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-cover {
+  margin-bottom: 1em;
+}
+
+.small-grey-text {
+  font-weight: 500;
+  font-size: 0.8em;
+  color: var(--warm-grey-color);
+}
+
+.book-cover h3 {
+  font-size: 1.1em;
+}
+
+.author {
+  color: var(--azure-light-color);
+  font-weight: 500;
+}
+
+.cta ul {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.cta ul li {
+  cursor: pointer;
+  font-weight: 500;
+  padding: 0 0.5rem;
+  color: var(--azure-light-color);
+}
+
+.cta ul li:first-child {
+  padding-left: 0;
+}
+
+.cta ul li:not(:last-child) {
+  border-right: 1px solid var(--azure-light-color);
+}
+
+.right-content {
+  display: none;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* circle progress-bar-fill and progress bar css */
+.progress-bar-fill {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid var(--warm-grey-rgba-color);
+  position: relative;
+}
+
+/* .progress-bar {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 50%;
+    border: 3px solid var(--azure-color);
+    clip: rect(0, 50px, 50px, 25px);
+} */
+
+.current-chapter h3 {
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-bottom: 1em;
+}
+
+/* Desktop View */
+@media screen and (min-width: 768px) {
+  .book-item {
+    padding: 1rem 2rem 1rem 2rem; /* top right bottom left */
+  }
+
+  .left-content {
+    width: 70%;
+    border-right: 1px solid var(--dark-rgba-color);
+    padding-right: 2rem;
+  }
+
+  .right-content {
+    display: inline;
+    width: 28%;
+  }
+}

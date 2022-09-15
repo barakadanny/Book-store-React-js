@@ -1,0 +1,48 @@
+header {
+  background-color: var(--white-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 1em;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+nav h1 {
+  color: var(--azure-color);
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+}
+
+header span {
+  color: var(--azure-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  border: 1px solid #e4dede;
+}
+
+.nav-menu {
+  color: red;
+}
+
+/* Desktop View */
+@media screen and (min-width: 768px) {
+  header {
+    padding: 1em 5rem;
+  }
+
+  nav {
+    gap: 5rem;
+  }
+}
