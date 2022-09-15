@@ -1,12 +1,12 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./Header.css";
-import { FaUser } from "react-icons/fa";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './Header.css';
+import { FaUser } from 'react-icons/fa';
 
 function Header() {
   const linkStyle = {
-    textDecoration: "none",
-    color: "#121212",
+    textDecoration: 'none',
+    color: '#121212',
   };
   return (
     <header>

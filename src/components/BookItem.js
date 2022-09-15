@@ -1,6 +1,6 @@
-import React from 'react';
-import ProtoTypes from 'prop-types';
-import './BookItem.css';
+import React from "react";
+import ProtoTypes from "prop-types";
+import "./BookItem.css";
 
 function BookItem(props) {
   const { title, author } = props;
@@ -28,7 +28,7 @@ function BookItem(props) {
               <div className="progress-bar" />
             </div>
             <div className="progress-bar-percentage">
-              <h1>64%</h1>
+              <h1>100%</h1>
               <span className="small-grey-text">completed</span>
             </div>
           </div>
