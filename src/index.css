@@ -12,6 +12,7 @@
   --white-color: #fff;
   --pale-grey-color: #f5f6fa;
   --warm-grey-color: #888;
+  --warm-grey-rgba-color: rgba(136, 136, 136, 0.3);
   --azure-color: #0290ff;
   --azure-light-color: #4386bf;
   --dark-bold-color: #121212;
@@ -20,6 +21,23 @@
 
 ul {
   list-style: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  border-radius: 0.15rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: transparent;
+  text-decoration: none;
+  color: var(--white-color);
+  background-color: var(--azure-color);
+  text-transform: uppercase;
+}
+
+.btn-grey {
+  color: var(--pale-grey-color);
 }
 
 html {
