@@ -21,6 +21,16 @@ nav ul {
   gap: 1rem;
 }
 
+header span {
+  color: var(--azure-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  border: 1px solid #e4dede;
+}
 
 /* Desktop View */
 @media screen and (min-width: 768px) {
@@ -28,6 +38,6 @@ nav ul {
     padding: 1em 5rem;
   }
   nav {
-      gap: 5rem;
+    gap: 5rem;
   }
 }

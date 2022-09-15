@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
+import { FaUser } from 'react-icons/fa';
 
 function Header() {
   return (
@@ -16,7 +17,11 @@ function Header() {
           </li>
         </ul>
       </nav>
-      <span>icon</span>
+      <span>
+        {' '}
+        <FaUser />
+        {' '}
+      </span>
     </header>
   );
 }
