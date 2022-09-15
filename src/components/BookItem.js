@@ -1,8 +1,9 @@
-import React from "react";
-import "./BookItem.css";
+import React from 'react';
+import ProtoTypes from 'prop-types';
+import './BookItem.css';
 
 function BookItem(props) {
-  const { id, title, author } = props;
+  const { title, author } = props;
   return (
     <div className="book-item">
       <div className="left-content">
@@ -45,5 +46,10 @@ function BookItem(props) {
     </div>
   );
 }
+
+BookItem.propTypes = {
+  title: ProtoTypes.string.isRequired,
+  author: ProtoTypes.string.isRequired,
+};
 
 export default BookItem;

@@ -1,12 +1,14 @@
-import React from "react";
-import BookItem from "./BookItem";
-import AddBook from "./AddBook";
+import React from 'react';
+import ProtoTypes from 'prop-types';
+import BookItem from './BookItem';
+import AddBook from './AddBook';
 
 function BookList(props) {
+  const { booksprop } = props;
   return (
     <>
       <div className="book-list">
-        {props.booksprop.map((book) => (
+        {booksprop.map((book) => (
           <BookItem key={book.id} title={book.title} author={book.author} />
         ))}
       </div>
@@ -14,5 +16,9 @@ function BookList(props) {
     </>
   );
 }
+
+BookList.propTypes = {
+  booksprop: ProtoTypes.string.isRequired,
+};
 
 export default BookList;
