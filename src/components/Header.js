@@ -5,9 +5,9 @@ import './Header.css';
 function Header() {
   return (
     <header>
-      <h1>Bookstore CMS</h1>
       <nav>
-        <ul>
+        <h1>Bookstore CMS</h1>
+        <ul className="nav-menu">
           <li>
             <Link to="/">BOOKS</Link>
           </li>

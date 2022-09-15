@@ -3,7 +3,23 @@
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --white-color: #fff;
+  --pale-grey-color: #f5f6fa;
+  --warm-grey-color: #888;
+  --azure-color: #0290ff;
+  --azure-light-color: #4386bf;
+  --dark-bold-color: #121212;
+  --dark-rgba-color: rgba(0, 0, 0, 0.05);
+}
+
+ul {
+  list-style: none;
 }
 
 html {
@@ -14,4 +30,30 @@ html {
 body {
   font-size: 0.9em;
   font-weight: 700;
+  line-height: 1.5;
+  background-color: var(--pale-grey-color);
+  overflow-x: hidden;
+  width: 100%;
+  padding: 0 1em;
+  scroll-behavior: smooth;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 4rem;
+  background-color: var(--white-color);
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+}
+
+.content {
+  padding: 1em 1em;
+  background-color: #fafafa;
+}
+
+/* Desktop view */
+@media screen and (min-width: 768px) {
+  .content {
+    padding: 1em 5rem;
+  }
 }

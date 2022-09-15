@@ -7,10 +7,12 @@ function App() {
   return (
     <div className="app-container">
       <Header />
-      <Routes>
-        <Route path="/" element={<Books />} />
-        <Route path="Categories" element={<Categories />} />
-      </Routes>
+      <div className="content">
+        <Routes>
+          <Route path="/" element={<Books />} />
+          <Route path="Categories" element={<Categories />} />
+        </Routes>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,33 @@
+header {
+  background-color: var(--white-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 1em;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+nav h1 {
+  color: var(--azure-color);
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+}
+
+
+/* Desktop View */
+@media screen and (min-width: 768px) {
+  header {
+    padding: 1em 5rem;
+  }
+  nav {
+      gap: 5rem;
+  }
+}
