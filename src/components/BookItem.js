@@ -1,6 +1,6 @@
-import React from "react";
-import ProtoTypes from "prop-types";
-import "./BookItem.css";
+import React from 'react';
+import ProtoTypes from 'prop-types';
+import './BookItem.css';
 
 function BookItem(props) {
   const { title, author } = props;
