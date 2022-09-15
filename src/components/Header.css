@@ -32,6 +32,10 @@ header span {
   border: 1px solid #e4dede;
 }
 
+.nav-menu {
+  color: red;
+}
+
 /* Desktop View */
 @media screen and (min-width: 768px) {
   header {
