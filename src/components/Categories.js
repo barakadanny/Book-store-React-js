@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
 function Categories() {
   return (
     <div className="categories">
       <button type="button" className="btn btn-grey">
-        Check categories
+        Check status
       </button>
     </div>
   );
