@@ -5,13 +5,12 @@ const init = [];
 export default function categoriesReducer(state = init, action) {
   switch (action.type) {
     case CHECK_STATUS:
-      return [...state, action.payload];
+      return 'Under construction';
     default:
       return state;
   }
 }
 
-export const checkStatus = (category) => ({
+export const checkStatus = () => ({
   type: CHECK_STATUS,
-  payload: category,
 });
