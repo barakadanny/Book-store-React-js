@@ -6,6 +6,7 @@ function AddBook() {
     <div className="add-book">
       <form className="add-book-content">
         <input className="title-inp" type="text" placeholder="Book title" />
+        <input className="author-inp" type="text" placeholder="Author name" />
         <select name="Category" id="lang">
           <option value="Category" disabled selected>
             Category
