@@ -1,4 +1,4 @@
-const CHECK_STATUS = "book-store/src/redux/categories/CHECK_STATUS";
+const CHECK_STATUS = 'book-store/src/redux/categories/CHECK_STATUS';
 
 const init = [];
 

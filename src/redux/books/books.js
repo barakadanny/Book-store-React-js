@@ -1,6 +1,6 @@
 // redux actions
-const ADD_BOOK = "book-store/src/redux/books/ADD_BOOK";
-const REMOVE_BOOK = "book-store/src/redux/books/REMOVE_BOOK";
+const ADD_BOOK = 'book-store/src/redux/books/ADD_BOOK';
+const REMOVE_BOOK = 'book-store/src/redux/books/REMOVE_BOOK';
 
 const init = [];
 
