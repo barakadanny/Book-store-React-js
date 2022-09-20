@@ -14,10 +14,18 @@ function AddBook() {
 
     switch (field) {
       case "title":
-        setBookItem({ ...bookItem, title: e.target.value });
+        // setBookItem({ ...bookItem, title: e.target.value });
+        setBookItem({
+          title: e.target.value,
+          author: bookItem.author,
+        });
         break;
       case "author":
-        setBookItem({ ...bookItem, author: e.target.value });
+        // setBookItem({ ...bookItem, author: e.target.value });
+        setBookItem({
+          title: bookItem.title,
+          author: e.target.value,
+        });
         break;
       default:
         setBookItem({ author: bookItem.author, title: bookItem.title });
