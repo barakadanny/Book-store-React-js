@@ -1,67 +1,64 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { addBook } from "../redux/books/books";
 import "./AddBook.css";
 
 function AddBook() {
+  const [title, setTitle] = useState("");
+  const [author, setAuthor] = useState("");
+
+  const books = useSelector((state) => state.booksReducer.booksArr);
   const dispatch = useDispatch();
-  const [bookItem, setBookItem] = useState({ title: "", author: "" });
 
-  const input = (e) => {
-    // setBookItem({ ...bookItem, [e.target.name]: e.target.value });
+  const addBookHandler = (e) => {
     e.preventDefault();
-    const field = e.target.name;
+    dispatch({
+      type: "ADD_BOOK",
+      payload: {
+        id: books.length + 1,
+        title,
+        author,
+      },
+    });
 
-    switch (field) {
-      case "title":
-        // setBookItem({ ...bookItem, title: e.target.value });
-        setBookItem({
-          title: e.target.value,
-          author: bookItem.author,
-        });
-        break;
-      case "author":
-        // setBookItem({ ...bookItem, author: e.target.value });
-        setBookItem({
-          title: bookItem.title,
-          author: e.target.value,
-        });
-        break;
-      default:
-        setBookItem({ author: bookItem.author, title: bookItem.title });
-    }
+    setTitle("");
+    setAuthor("");
+  };
+
+  const titleChangeHandler = (event) => {
+    setTitle(event.target.value);
+  };
+  const authorChangeHandler = (event) => {
+    setAuthor(event.target.value);
   };
 
   return (
     <div className="add-book">
-      <form className="add-book-content">
+      <form className="add-book-content" onSubmit={addBookHandler}>
         <input
           className="title-inp"
           name="book"
           type="text"
           placeholder="Book title"
-          function={input}
+          onChange={titleChangeHandler}
+          value={title}
         />
         <input
           className="author-inp"
           name="author"
           type="text"
           placeholder="Author name"
-          function={input}
+          onChange={authorChangeHandler}
+          value={author}
         />
         <select name="Category" id="lang">
-          <option value="Category" disabled selected>
+          {/* <option value="Category" disabled selected>
             Category
           </option>
           <option value="History">History</option>
-          <option value="Programming">Programming</option>
+          <option value="Programming">Programming</option> */}
         </select>
-        <input
-          className="btn"
-          type="submit"
-          value="Add book"
-          onClick={() => dispatch(addBook(bookItem))}
-        />
+        <input className="btn" type="submit" value="Add book" />
       </form>
     </div>
   );
