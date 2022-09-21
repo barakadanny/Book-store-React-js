@@ -30,6 +30,10 @@ input::placeholder {
   }
 
   .title-inp {
-    width: 70%;
+    width: 40%;
+  }
+
+  .author-inp {
+    width: 25%;
   }
 }

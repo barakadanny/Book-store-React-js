@@ -2,7 +2,25 @@
 const ADD_BOOK = 'book-store/src/redux/books/ADD_BOOK';
 const REMOVE_BOOK = 'book-store/src/redux/books/REMOVE_BOOK';
 
-const init = [];
+const init = {
+  booksArr: [
+    {
+      id: 1,
+      title: 'The Hunger Games',
+      author: 'Suzanne Collins',
+    },
+    {
+      id: 2,
+      title: 'Dune',
+      author: 'Frank Herbert',
+    },
+    {
+      id: 3,
+      title: 'Capital in the Twenty-First Century',
+      author: 'Suzanne Collins',
+    },
+  ],
+};
 
 export default function booksReducer(state = init, action) {
   switch (action.type) {
@@ -16,9 +34,9 @@ export default function booksReducer(state = init, action) {
 }
 
 // redux actions
-export const addBook = (book) => ({
+export const addBook = (payload) => ({
   type: ADD_BOOK,
-  payload: book,
+  payload,
 });
 
 export const removeBook = (book) => ({

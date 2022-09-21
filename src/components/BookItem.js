@@ -1,9 +1,21 @@
 import React from 'react';
 import ProtoTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
 import './BookItem.css';
 
 function BookItem(props) {
-  const { title, author } = props;
+  const { index, title, author } = props;
+  const dispatch = useDispatch();
+
+  const removeBookHandler = () => {
+    dispatch({
+      type: 'REMOVE_BOOK',
+      payload: {
+        id: index,
+      },
+    });
+  };
+
   return (
     <div className="book-item">
       <div className="left-content">
@@ -16,7 +28,9 @@ function BookItem(props) {
           <div className="cta">
             <ul>
               <li>Comments</li>
-              <li>Remove</li>
+              <li onClick={removeBookHandler} aria-hidden="true">
+                Remove
+              </li>
               <li>Edit</li>
             </ul>
           </div>
@@ -50,6 +64,7 @@ function BookItem(props) {
 BookItem.propTypes = {
   title: ProtoTypes.string.isRequired,
   author: ProtoTypes.string.isRequired,
+  index: ProtoTypes.number.isRequired,
 };
 
 export default BookItem;

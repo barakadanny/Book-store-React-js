@@ -1,25 +1,27 @@
 import React from 'react';
-import ProtoTypes from 'prop-types';
+import { useSelector } from 'react-redux';
 import BookItem from './BookItem';
 import AddBook from './AddBook';
 import './BookList.css';
 
-function BookList(props) {
-  const { booksprop } = props;
+function BookList() {
+  const books = useSelector((state) => state.booksReducer.booksArr);
+
   return (
     <>
       <div className="book-list">
-        {booksprop.map((book) => (
-          <BookItem key={book.id} title={book.title} author={book.author} />
+        {books.map((book) => (
+          <BookItem
+            key={book.id}
+            index={book.id}
+            title={book.title}
+            author={book.author}
+          />
         ))}
       </div>
       <AddBook />
     </>
   );
 }
-
-BookList.propTypes = {
-  booksprop: ProtoTypes.string.isRequired,
-};
 
 export default BookList;
