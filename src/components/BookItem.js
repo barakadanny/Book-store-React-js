@@ -1,7 +1,7 @@
-import React from "react";
-import ProtoTypes from "prop-types";
-import { useDispatch } from "react-redux";
-import "./BookItem.css";
+import React from 'react';
+import ProtoTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import './BookItem.css';
 
 function BookItem(props) {
   const { index, title, author } = props;
@@ -9,7 +9,7 @@ function BookItem(props) {
 
   const removeBookHandler = () => {
     dispatch({
-      type: "REMOVE_BOOK",
+      type: 'REMOVE_BOOK',
       payload: {
         id: index,
       },
@@ -28,7 +28,9 @@ function BookItem(props) {
           <div className="cta">
             <ul>
               <li>Comments</li>
-              <li onClick={removeBookHandler}>Remove</li>
+              <li onClick={removeBookHandler} aria-hidden="true">
+                Remove
+              </li>
               <li>Edit</li>
             </ul>
           </div>
@@ -62,6 +64,7 @@ function BookItem(props) {
 BookItem.propTypes = {
   title: ProtoTypes.string.isRequired,
   author: ProtoTypes.string.isRequired,
+  index: ProtoTypes.number.isRequired,
 };
 
 export default BookItem;
