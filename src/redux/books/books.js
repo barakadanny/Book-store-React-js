@@ -28,6 +28,8 @@ export default function booksReducer(state = init, action) {
       return [...state, action.payload];
     case REMOVE_BOOK:
       return state.filter((book) => book.id !== action.payload.id);
+    case DISPLAY_BOOKS:
+      return state.concat(action.payload);
     default:
       return state;
   }
@@ -43,3 +45,8 @@ export const removeBook = (book) => ({
   type: REMOVE_BOOK,
   payload: book,
 });
+
+export const displayBooks = (payload) => {
+    type: DISPLAY_BOOKS,
+    payload,
+};
