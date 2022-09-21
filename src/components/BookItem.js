@@ -4,14 +4,14 @@ import { useDispatch } from "react-redux";
 import "./BookItem.css";
 
 function BookItem(props) {
-  const { id, title, author } = props;
+  const { index, title, author } = props;
   const dispatch = useDispatch();
 
   const removeBookHandler = () => {
     dispatch({
       type: "REMOVE_BOOK",
       payload: {
-        id,
+        id: index,
       },
     });
   };

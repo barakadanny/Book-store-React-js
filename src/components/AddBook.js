@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { addBook } from "../redux/books/books";
-import "./AddBook.css";
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { addBook } from '../redux/books/books';
+import './AddBook.css';
 
 function AddBook() {
-  const [title, setTitle] = useState("");
-  const [author, setAuthor] = useState("");
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
 
   const books = useSelector((state) => state.booksReducer.booksArr);
   const dispatch = useDispatch();
@@ -13,7 +13,7 @@ function AddBook() {
   const addBookHandler = (e) => {
     e.preventDefault();
     dispatch({
-      type: "ADD_BOOK",
+      type: 'ADD_BOOK',
       payload: {
         id: books.length + 1,
         title,
@@ -21,8 +21,8 @@ function AddBook() {
       },
     });
 
-    setTitle("");
-    setAuthor("");
+    setTitle('');
+    setAuthor('');
   };
 
   const titleChangeHandler = (event) => {
