@@ -1,23 +1,24 @@
 // redux actions
-const ADD_BOOK = "book-store/src/redux/books/ADD_BOOK";
-const REMOVE_BOOK = "book-store/src/redux/books/REMOVE_BOOK";
+const ADD_BOOK = 'book-store/src/redux/books/ADD_BOOK';
+const REMOVE_BOOK = 'book-store/src/redux/books/REMOVE_BOOK';
+const DISPLAY_BOOK = 'book-store/src/redux/books/DISPLAY_BOOKS';
 
 const init = {
   booksArr: [
     {
       id: 1,
-      title: "The Hunger Games",
-      author: "Suzanne Collins",
+      title: 'The Hunger Games',
+      author: 'Suzanne Collins',
     },
     {
       id: 2,
-      title: "Dune",
-      author: "Frank Herbert",
+      title: 'Dune',
+      author: 'Frank Herbert',
     },
     {
       id: 3,
-      title: "Capital in the Twenty-First Century",
-      author: "Suzanne Collins",
+      title: 'Capital in the Twenty-First Century',
+      author: 'Suzanne Collins',
     },
   ],
 };
@@ -48,6 +49,6 @@ export const removeBook = (book) => ({
 });
 
 export const displayBooks = (payload) => ({
-  type: DISPLAY_BOOKS,
+  type: DISPLAY_BOOK,
   payload,
 });
