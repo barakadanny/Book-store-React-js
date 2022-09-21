@@ -52,11 +52,11 @@ function AddBook() {
           value={author}
         />
         <select name="Category" id="lang">
-          {/* <option value="Category" disabled selected>
+          <option value="Category" disabled selected>
             Category
           </option>
           <option value="History">History</option>
-          <option value="Programming">Programming</option> */}
+          <option value="Programming">Programming</option>
         </select>
         <input className="btn" type="submit" value="Add book" />
       </form>
