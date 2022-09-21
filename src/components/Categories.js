@@ -1,5 +1,5 @@
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 function Categories() {
   const category = useSelector((state) => state.category);
@@ -7,7 +7,7 @@ function Categories() {
 
   const checkStatusHandler = () => {
     dispatch({
-      type: "CHECK_STATUS",
+      type: 'CHECK_STATUS',
     });
   };
 
