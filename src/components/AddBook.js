@@ -1,29 +1,27 @@
-import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { addBook } from "../redux/books/books";
-import "./AddBook.css";
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addBook } from '../redux/books/books';
+import './AddBook.css';
 
 function AddBook() {
-  const [title, setTitle] = useState("");
-  const [author, setAuthor] = useState("");
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
 
-  // const books = useSelector((state) => state.booksReducer.booksArr);
   const dispatch = useDispatch();
 
   const addBookHandler = (e) => {
-    // const uniqueId = Math.floor(Math.random() * 1000);
     e.preventDefault();
     dispatch(
       addBook({
         item_id: Math.floor(Math.random() * 1000),
         title,
         author,
-        category: "Action",
-      })
+        category: 'Action',
+      }),
     );
 
-    setTitle("");
-    setAuthor("");
+    setTitle('');
+    setAuthor('');
   };
 
   const titleChangeHandler = (event) => {

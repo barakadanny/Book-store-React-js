@@ -1,8 +1,8 @@
-import React from "react";
-import ProtoTypes from "prop-types";
-import { useDispatch } from "react-redux";
-import { removeBook } from "../redux/books/books";
-import "./BookItem.css";
+import React from 'react';
+import ProtoTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/books';
+import './BookItem.css';
 
 function BookItem(props) {
   const { index, title, author } = props;
