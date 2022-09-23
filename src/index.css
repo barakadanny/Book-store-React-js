@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:100);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 *,
 *::before,
@@ -40,12 +40,8 @@ ul {
   color: var(--pale-grey-color);
 }
 
-html {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 100;
-}
-
 body {
+  font-family: 'Roboto', sans-serif;
   font-size: 0.9em;
   font-weight: 700;
   line-height: 1.5;
