@@ -12,8 +12,9 @@ export default function booksReducer(state = init, action) {
   switch (action.type) {
     case ADD_BOOK:
       return [...state, action.payload];
-    case REMOVE_BOOK:
+    case "book-store/src/redux/books/REMOVE_BOOK/fulfilled":
       return state.filter((book) => book.id !== action.payload.id);
+
     case "book-store/src/redux/books/DISPLAY_BOOKS/fulfilled":
       return action.payload;
 
@@ -37,9 +38,14 @@ export const addBook = createAsyncThunk(ADD_BOOK, async (book) => {
   return book;
 });
 
-export const removeBook = (book) => ({
-  type: REMOVE_BOOK,
-  payload: book,
+export const removeBook = createAsyncThunk(REMOVE_BOOK, async (id) => {
+  await fetch(
+    `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/rRu8u7fR7sncSsKAbO3p/books/${id}`,
+    {
+      method: "DELETE",
+    }
+  );
+  return id;
 });
 
 export const displayBooks = createAsyncThunk(DISPLAY_BOOK, async () => {

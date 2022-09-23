@@ -12,7 +12,7 @@ function BookList() {
 
   useEffect(() => {
     dispatch(displayBooks());
-  }, []);
+  }, [books, dispatch]);
 
   return (
     <>
