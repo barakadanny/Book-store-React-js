@@ -1,24 +1,24 @@
 import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { addBook } from '../redux/books/books';
 import './AddBook.css';
 
 function AddBook() {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
 
-  const books = useSelector((state) => state.booksReducer.booksArr);
   const dispatch = useDispatch();
 
   const addBookHandler = (e) => {
     e.preventDefault();
-    dispatch({
-      type: 'ADD_BOOK',
-      payload: {
-        id: books.length + 1,
+    dispatch(
+      addBook({
+        item_id: Math.floor(Math.random() * 1000),
         title,
         author,
-      },
-    });
+        category: 'Action',
+      }),
+    );
 
     setTitle('');
     setAuthor('');

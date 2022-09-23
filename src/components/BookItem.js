@@ -1,6 +1,7 @@
 import React from 'react';
 import ProtoTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/books';
 import './BookItem.css';
 
 function BookItem(props) {
@@ -8,12 +9,7 @@ function BookItem(props) {
   const dispatch = useDispatch();
 
   const removeBookHandler = () => {
-    dispatch({
-      type: 'REMOVE_BOOK',
-      payload: {
-        id: index,
-      },
-    });
+    dispatch(removeBook(index));
   };
 
   return (
