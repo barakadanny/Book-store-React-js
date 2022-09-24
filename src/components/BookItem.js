@@ -38,7 +38,7 @@ function BookItem(props) {
               <div className="progress-bar" />
             </div>
             <div className="progress-bar-percentage">
-              <h1>100%</h1>
+              <h1>70%</h1>
               <span className="small-grey-text">completed</span>
             </div>
           </div>

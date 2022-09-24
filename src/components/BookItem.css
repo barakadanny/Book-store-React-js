@@ -31,6 +31,7 @@
 
 .book-cover h3 {
   font-size: 1.1em;
+  font-weight: 900;
 }
 
 .author {
@@ -77,18 +78,18 @@
   position: relative;
 }
 
-/* .progress-bar {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    border-radius: 50%;
-    border: 3px solid var(--azure-color);
-    clip: rect(0, 50px, 50px, 25px);
-} */
+.progress-bar {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: -3.8px;
+  right: 0;
+  left: -2px;
+  bottom: 0;
+  border-radius: 50%;
+  border: 3px solid var(--azure-color);
+  clip: rect(0, 50px, 50px, 20px);
+}
 
 .current-chapter h3 {
   font-size: 1.1em;

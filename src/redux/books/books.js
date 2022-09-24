@@ -57,5 +57,4 @@ export const displayBooks = createAsyncThunk(DISPLAY_BOOK, async () => {
     item_id: key,
   }));
   return books;
-  // return data;
 });
