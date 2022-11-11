@@ -1,13 +1,73 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --white-color: #fff;
+  --pale-grey-color: #f5f6fa;
+  --warm-grey-color: #888;
+  --warm-grey-rgba-color: rgba(136, 136, 136, 0.3);
+  --azure-color: #0290ff;
+  --azure-light-color: #4386bf;
+  --dark-bold-color: #121212;
+  --dark-rgba-color: rgba(0, 0, 0, 0.05);
+}
+
+ul {
+  list-style: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  border-radius: 0.15rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: transparent;
+  text-decoration: none;
+  color: var(--white-color);
+  background-color: var(--azure-color);
+  text-transform: uppercase;
+}
+
+.btn-grey {
+  color: var(--pale-grey-color);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9em;
+  font-weight: 700;
+  line-height: 1.5;
+  background-color: var(--pale-grey-color);
+  overflow-x: hidden;
+  width: 100%;
+  padding: 0 1em;
+  scroll-behavior: smooth;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 4rem;
+  background-color: var(--white-color);
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+}
+
+.content {
+  padding: 1em 1em;
+  background-color: #fafafa;
+}
+
+/* Desktop view */
+@media screen and (min-width: 768px) {
+  .content {
+    padding: 1em 5rem;
+  }
 }
